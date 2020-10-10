@@ -6,7 +6,8 @@ AdarshRazor
 '''
 
 from cryptography.fernet import Fernet
-from tkinter import filedialog 
+from tkinter import filedialog
+import tkinter as tk 
 import os
 
 def encryption_message(message,key,path="./output"):
@@ -86,6 +87,7 @@ while 1:
         export_key()
         break
     elif option==3:
+        tk.Tk().withdraw()
         p = filedialog.askopenfilename(title = 'Choose the file location')
         message=open(p, "rb").read()
         print(p)
