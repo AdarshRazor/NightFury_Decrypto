@@ -1,5 +1,6 @@
 from cryptography.fernet import Fernet
-from tkinter import filedialog 
+from tkinter import filedialog
+import tkinter as tk 
 import os
 
 s = filedialog.askopenfilename(title = 'Choose the key file location')
@@ -9,6 +10,7 @@ f = Fernet(load_key)
 #load_key=open("secret.key", "rb").read()
 #f = Fernet(load_key)
 
+tk.Tk().withdraw()
 p = filedialog.askopenfilename(title = 'Choose the file location')
 #path = os.path.dirname(p)
 data=open(p, "rb").read()
