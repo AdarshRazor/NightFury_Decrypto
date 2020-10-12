@@ -18,6 +18,16 @@ pip3 install -r requirements.txt (Python3)
 
 ### Usuage
 
+There are 2 files depends on the user desire. [encryption.py](https://github.com/AdarshRazor/NightFury_Decrypto/blob/main/encryption.py) and [decrypt.py](https://github.com/AdarshRazor/NightFury_Decrypto/blob/main/decrypt.py) which do as per their given names.
+
+In order to encrypt the file. Type the following command in CMD.
+```python
+python encryption.py
+```
+User can select from the 2 options of encryption and 1 to print out the export the key(encryption key)
+
+
+
 
 
 ---
