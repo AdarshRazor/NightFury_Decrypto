@@ -8,5 +8,6 @@ It divides the encrypted file into 4 or more parts and then send it to the recie
 ### Installation
 
 First install the requiement.txt using following command in cmd in that particular folder.
-
-> pip install -r requirements.txt (Python 2), or pip3 install -r requirements.txt (Python 3)
+```bash
+pip install -r requirements.txt (Python 2), or pip3 install -r requirements.txt (Python 3)
+```
