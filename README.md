@@ -2,8 +2,7 @@
 
 ### What is NightFury_Decrypto
 
-A basic sript to encrypt and decrypt your data. Where the main catch is to deliver the encrypted file to the reciever.
-It divides the encrypted file into 4 or more parts and then send it to the reciever. Even if hacker manages to get his/her hands on the file, in order to decrypt it, other file will be required as it will make the file more secured from hackers.
+A basic script to encrypt and decrypt your data. Where the main catch is to deliver the encrypted file to the receiver. It divides the encrypted file into 4 or more parts and then send it to the receiver. Even if a hacker manages to get his/her hands on the file, in order to decrypt it, other files will be required as it will make the file more secured from hackers.
 
 ---
 
