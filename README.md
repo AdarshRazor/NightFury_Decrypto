@@ -26,7 +26,7 @@ python encryption.py
 ```
 User can select from the 2 options of encryption and 1 to print out the export the key(encryption key)
 
-
+![alt text](https://github.com/AdarshRazor/NightFury_Decrypto/blob/main/imgs/1.PNG "selection menu")
 
 
 
