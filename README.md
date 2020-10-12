@@ -46,6 +46,10 @@ python encryption.py
 
 > **Decryption**
 
+```python
+python decrypt.py
+```
+
 
 1. In order to decrypt it first you need to locate the _secret.key_ file and then the _data.file_ which you can find in the output folder.
 
