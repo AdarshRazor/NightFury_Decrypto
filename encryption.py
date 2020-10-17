@@ -10,6 +10,7 @@ from tkinter import filedialog
 import tkinter as tk 
 import os
 
+
 def encryption_message(message,key,path="./output"):
     print(message)
     en_message=message.encode()
@@ -62,10 +63,14 @@ def export_key():
     key_file.write(key)
     key_file.close()
 
-############ main program
+def export_keys(key):
+    return(key)
+
+########### main program
 
 key=Fernet.generate_key()
-
+export_keys(key)
+'''
 os.system('cls')
 print("\nWelcome to Encry_Decry")
 print("\n1. Enter the Message")
@@ -95,3 +100,4 @@ while 1:
         break
     else:
         break
+    '''
