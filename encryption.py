@@ -40,7 +40,6 @@ def encrypting_file(message,key,path):
     k=Fernet(key)
     encrypted_message=k.encrypt(message)
     os.system('cls')
-
     x="/"
     p=path.split(x)
     p.pop()
@@ -56,6 +55,7 @@ def encrypting_file(message,key,path):
     data_file.write(encrypted_message)
     data_file.close()
     export_key()
+    
 
 
 def export_key():
@@ -70,34 +70,3 @@ def export_keys(key):
 
 key=Fernet.generate_key()
 export_keys(key)
-'''
-os.system('cls')
-print("\nWelcome to Encry_Decry")
-print("\n1. Enter the Message")
-print("2. Print and Export Key")
-print("3. Locate the file")
-print("4. Exit\n")
-
-
-option=int(input("\nEnter the option: "))
-
-while 1:
-    #option=int(input("\nEnter the option: "))
-    if option==1:
-        message=input("Enter the message: ")
-        encryption_message(message,key)
-        break
-    elif option==2:
-        print("Key is stored with file name - secret.key\n",key)
-        export_key()
-        break
-    elif option==3:
-        tk.Tk().withdraw()
-        p = filedialog.askopenfilename(title = 'Choose the file location')
-        message=open(p, "rb").read()
-        print(p)
-        encrypting_file(message,key,p)
-        break
-    else:
-        break
-    '''

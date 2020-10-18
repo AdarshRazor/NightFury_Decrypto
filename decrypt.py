@@ -4,6 +4,7 @@ import tkinter as tk
 import os
 
 def decryption():
+    p = filedialog.askopenfilename(title = 'Choose the file location')
     s = filedialog.askopenfilename(title = 'Choose the key file location')
     load_key=open(s, "rb").read()
     f = Fernet(load_key)
@@ -12,7 +13,6 @@ def decryption():
     #f = Fernet(load_key)
 
     tk.Tk().withdraw()
-    p = filedialog.askopenfilename(title = 'Choose the file location')
     #path = os.path.dirname(p)
     data=open(p, "rb").read()
     decrypted_message = f.decrypt(data)

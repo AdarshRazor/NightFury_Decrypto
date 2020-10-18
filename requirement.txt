@@ -1,4 +1,3 @@
 cryptography
-tkinter
-tkinter.filedialog
-
+mega.py
+filesplit

@@ -1,12 +1,14 @@
 import sys
 import time
-import os
 from cryptography.fernet import Fernet
 from tkinter import filedialog
 import tkinter as tk 
 import encryption
+import glob, os
 import decrypt
+from fsplit.filesplit import Filesplit
 from encryption import key
+
 
 
 def print_slowt(str):
@@ -71,34 +73,28 @@ if __name__ == "__main__":
                 message=open(p, "rb").read()
                 print(p)
                 encryption.encrypting_file(message,key,p)
+                p=p.split("/")
+                p.pop()
+                p="/".join(p)
+                os.chdir(p)
+                os.system("python megaauth.py")
                 break
             else:
                 break   
 
     elif main_input==2:
+        fs = Filesplit()
+        folder_selected = filedialog.askdirectory(title = 'Choose the directory file location')
+        fs.merge(input_dir=folder_selected)
+        os.remove("./output/divided/fs_manifest.csv")
+        filename=[]
+        os.chdir("./output/divided")
+        
+        for file in glob.glob("*.file"):
+            filename.append(file)
+        for i in range(len(filename)-1):
+            os.remove(filename[i+1])
+        
         decrypt.decryption()
-        '''
-        s = filedialog.askopenfilename(title = 'Choose the key file location')
-        load_key=open(s, "rb").read()
-        f = Fernet(load_key)
-
-        #load_key=open("secret.key", "rb").read()
-        #f = Fernet(load_key)
-
-        tk.Tk().withdraw()
-        p = filedialog.askopenfilename(title = 'Choose the file location')
-        #path = os.path.dirname(p)
-        data_dec=open(p, "rb").read()
-        decrypted_message = f.decrypt(data_dec)
-
-        #print(decrypted_message)
-
-        data_file = open("result.txt", "wb")
-        data_file.write(decrypted_message)
-        data_file.close()
-        os.remove(s)
-        os.remove(p)
-        '''
-
     else:
         exit
