@@ -13,7 +13,7 @@ os.remove("./output/data.file")
 
 mega = Mega() # creating instance of mega
 print("\nPlease wait, logging in .....")
-m = mega.login("razorrc.racd@gmail.com", "Adarsh@123")
+m = mega.login("Email", "Password") #email id and passwor of www.mega.nz
 print("login done !! ")
 
 filename=[]
