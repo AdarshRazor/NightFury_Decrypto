@@ -8,7 +8,7 @@ import glob, os
 import decrypt
 from fsplit.filesplit import Filesplit
 from encryption import key
-
+import numpy
 
 
 def print_slowt(str):
