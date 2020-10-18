@@ -2,9 +2,14 @@ from cryptography.fernet import Fernet
 from tkinter import filedialog
 import tkinter as tk 
 import os
+import time
 
 def decryption():
+    print("\nChoose the data.file to decrypt it")
+    time.sleep(2.5)
     p = filedialog.askopenfilename(title = 'Choose the file location')
+    print("\nSelect the secret key")
+    time.sleep(2.5)
     s = filedialog.askopenfilename(title = 'Choose the key file location')
     load_key=open(s, "rb").read()
     f = Fernet(load_key)
