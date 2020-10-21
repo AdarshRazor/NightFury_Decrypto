@@ -7,10 +7,10 @@ import time
 def decryption():
     print("\nChoose the data.file to decrypt it")
     time.sleep(2.5)
-    p = filedialog.askopenfilename(title = 'Choose the file location')
+    p = filedialog.askopenfilename(title = 'Choose the file location', filetypes=[("file type", ".file")])
     print("\nSelect the secret key")
     time.sleep(2.5)
-    s = filedialog.askopenfilename(title = 'Choose the key file location')
+    s = filedialog.askopenfilename(title = 'Choose the key file location',filetypes=[("secret key", ".key")])
     load_key=open(s, "rb").read()
     f = Fernet(load_key)
 

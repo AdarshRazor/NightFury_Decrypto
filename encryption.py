@@ -40,12 +40,13 @@ def encrypting_file(message,key,path):
     k=Fernet(key)
     encrypted_message=k.encrypt(message)
     os.system('cls')
-    x="/"
-    p=path.split(x)
-    p.pop()
-    p.append("output")
-    p=tuple(p)
-    path=x.join(p)
+    #x="/"
+    #p=path.split(x)
+    #p.pop()
+    #p.append("output")
+    #p=tuple(p)
+    #path=x.join(p)
+    path="./output"
 
     print("Message is encrypted !! Check the ouput folder")
     #print("\n",encrypted_message)

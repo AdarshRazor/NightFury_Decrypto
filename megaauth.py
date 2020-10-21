@@ -10,6 +10,7 @@ inp1=int(input("Enter the split size (5 = 500KB, 50 = 5MB, 500 = 50MB [default 5
 fs.split(file="./output/data.file", split_size=inp1*100000, output_dir="./output/divided")
 os.remove("./output/data.file")
 
+print("Files are divided, Please check output/divided folder")
 
 mega = Mega() # creating instance of mega
 print("\nPlease wait, logging in .....")
