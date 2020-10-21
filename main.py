@@ -72,9 +72,6 @@ if __name__ == "__main__":
                 message=open(p, "rb").read()
                 print(p)
                 encryption.encrypting_file(message,key,p)
-                #p=p.split("/")
-                #p.pop()
-                #p="/".join(p)
                 p="../"
                 os.chdir(p)
                 print(os.getcwd())
