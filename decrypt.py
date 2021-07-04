@@ -16,7 +16,7 @@ def decryption():
     tk.Tk().withdraw()
     data=open(p, "rb").read()
     decrypted_message = f.decrypt(data)
-
+    
     data_file = open("result.txt", "wb")
     data_file.write(decrypted_message)
     data_file.close()
