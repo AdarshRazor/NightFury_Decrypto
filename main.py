@@ -84,9 +84,10 @@ if __name__ == "__main__":
         fs = Filesplit()
         folder_selected = filedialog.askdirectory(title = 'Choose the directory file location')
         fs.merge(input_dir=folder_selected)
-        os.remove("./output/divided/fs_manifest.csv")
+        os.chdir(folder_selected)
+        os.remove("./fs_manifest.csv")
         filename=[]
-        os.chdir("./output/divided")
+        #os.chdir("./output/divided")
         
         for file in glob.glob("*.file"):
             filename.append(file)
@@ -94,5 +95,8 @@ if __name__ == "__main__":
             os.remove(filename[i+1])
         
         decrypt.decryption()
+
+        print("Please check the download folder for the result file.")
+        print("Thank for using Nightfury_Decrypto !!")
     else:
         exit
