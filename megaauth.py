@@ -5,16 +5,16 @@ from fsplit.filesplit import Filesplit
 
 fs = Filesplit()
 
-inp1=int(input("Enter the split size (5 = 500KB, 50 = 5MB, 500 = 50MB [default 5]) : "))
+inp1=int(input("Enter the split size in KB: "))
 
-fs.split(file="./output/data.file", split_size=inp1*100000, output_dir="./output/divided")
+fs.split(file="./output/data.file", split_size=inp1*1000, output_dir="./output/divided")
 os.remove("./output/data.file")
 
 print("Files are divided, Please check output/divided folder")
 
 mega = Mega() # creating instance of mega
 print("\nPlease wait, logging in .....")
-m = mega.login("Email", "Password") #email id and passwor of www.mega.nz
+m = mega.login("email", "password") #email id and passwor of www.mega.nz
 print("login done !! ")
 
 filename=[]
