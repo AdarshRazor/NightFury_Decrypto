@@ -87,6 +87,7 @@ if __name__ == "__main__":
         os.chdir(folder_selected)
         os.remove("./fs_manifest.csv")
         filename=[]
+        
         #os.chdir("./output/divided")
         
         for file in glob.glob("*.file"):
